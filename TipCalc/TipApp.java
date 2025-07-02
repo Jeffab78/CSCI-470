@@ -53,8 +53,8 @@ public class TipApp
         //exception handling for if user enters a non numeric value or a negative bill amount
         try
         {
-          Scanner scan1 = new Scanner(System.in);
-          bill = scan1.nextDouble();
+          //Scanner scan1 = new Scanner(System.in);
+          bill = scan.nextDouble();
         }
         catch(InputMismatchException e)
         { 
@@ -65,6 +65,7 @@ public class TipApp
       //gives message if bill is invalid
         if (bill < 0)
           System.out.println("Please enter a valid bill amount.");
+          
       }
       while(bill <0);
     
@@ -79,8 +80,8 @@ public class TipApp
         //exception handling if non numeric value is entered
         try
         {
-          Scanner scan2 = new Scanner(System.in);
-          tip = scan2.nextInt();
+          //Scanner scan2 = new Scanner(System.in);
+          tip = scan.nextInt();
         }
         catch(InputMismatchException e)
         { 
@@ -103,8 +104,8 @@ public class TipApp
               
         try
         {
-          Scanner scan3 = new Scanner(System.in);
-          party = scan3.nextInt();
+          //Scanner scan3 = new Scanner(System.in);
+          party = scan.nextInt();
         }
         
         catch(InputMismatchException e)
@@ -135,5 +136,12 @@ public class TipApp
       anotherBill = scan.next().charAt(0);
     }
     while (anotherBill == 'y' || anotherBill == 'Y'); //if they ansered yes, return to do another bill
+  
+    scan.close();
+    
+
+    
+
+  
   }
 }
