@@ -17,6 +17,7 @@ public class TipCalculator
   private double billAmt = 0;
   private int tipPct = 20;
   private int partySize = 1;
+  private String partyName;
   
   //get and set methods for each data member
   public double getBillAmt()
@@ -49,6 +50,16 @@ public class TipCalculator
     this.partySize = partySize;
   }
   
+  public void setParty(String partyName)
+  {
+    this.partyName = partyName;
+  }
+
+  public String getPartyName()
+  {
+    return partyName;
+  }
+
   /*
    Method: getTotalBill()
    Use: Gets the bill amount and adds the desired tip % to return final bill total

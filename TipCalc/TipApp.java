@@ -44,6 +44,15 @@ public class TipApp
     //Code for the bill input
     do
     {
+      System.out.println("Enter the party name: ");
+      
+      String partyName;
+      
+      partyName = scan.nextLine();
+      
+      tipCalc1.setParty(partyName);
+      
+      
       System.out.println("Enter the bill amount: ");
       //a loop to continue to prompt for a valid bill amount if an invalid one is entered
       double bill;
@@ -123,7 +132,7 @@ public class TipApp
     
       //Output formatted
       System.out.println("---------Your Summary---------\n");
-    
+      System.out.printf("%-16s%10s\n","Party Name: " ,tipCalc1.getPartyName());
       System.out.printf("%-16s%10s\n", "Bill Amount: " , tipFormat.format(tipCalc1.getBillAmt()));
       System.out.printf("%-16s%10s\n", "Tip %: " , tipCalc1.getTipPct());
       System.out.printf("%-16s%10s\n", "Party Size: " , tipCalc1.getPartySize());
